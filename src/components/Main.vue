@@ -38,14 +38,13 @@
               <v-chip-group
                           column
                         >
-              <v-chip>
-                {{item.caption}}
+              <v-chip v-for="caption in item.captions" :key="caption">
+                {{caption}}
               </v-chip>
               </v-chip-group>
             </v-card-text>
             <v-card-actions>
               <v-btn
-                color="orange lighten-2"
                 text
                 @click="navigate(item.path)"
               >
@@ -87,11 +86,12 @@ export default {
   name: 'Main',
   data: () => ({
     title: 'Welcome to my portfolio',
+    name: 'Ambre Hautot',
     projects: [
       {
         name: 'Todpole',
         image: 'todpole_app_icon.png',
-        caption: 'Project from scratch',
+        captions: ['Project from scratch', 'Dec 2020'],
         description: 'Project of a new App allowing parents to find new activities for their todlers',
         show: false,
         path: '/project/todpole',
@@ -99,7 +99,7 @@ export default {
       {
         name: 'Group feature - Airbnb',
         image: 'airbnb.jpg',
-        caption: 'New feature',
+        captions: ['New feature', 'Dec 2020'],
         description: 'Adding a new feature for group bookings to Airbnb',
         show: false,
         path: '/project/abnb',
@@ -107,7 +107,7 @@ export default {
       {
         name: 'Sketching',
         image: 'sketching.jpeg',
-        caption: 'Sketching challenge',
+        captions: ['Sketching challenge', 'Dec 2020'],
         description: 'UX sketching challenge: 100 days of visual library building.',
         externalLink: 'https://uxdesign.cc/ux-sketching-challenge-100-days-of-visual-library-building-580d5b102df6',
         show: false,
@@ -116,7 +116,7 @@ export default {
       {
         name: 'Project 3',
         image: 'project1.jpeg',
-        caption: 'Project from scratch',
+        captions: ['Project from scratch', 'Dec 2020'],
         description: 'Tbd',
         show: false,
         path: '/',
@@ -124,7 +124,7 @@ export default {
       {
         name: 'Project 4',
         image: 'project2.jpeg',
-        caption: 'Project from scratch',
+        captions: ['Project from scratch', 'Dec 2020'],
         description: 'Tbd',
         show: false,
         path: '/',

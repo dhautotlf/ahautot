@@ -3,7 +3,7 @@
   <div>
     <h1>Project {{$route.params.name}}</h1>
     <v-container>
-      <v-row class="text-right">
+      <v-row class="text-left">
       <p>
       <Md/>
       </p>
@@ -22,9 +22,3 @@ export default {
   components: { Md },
 };
 </script>
-
-<style lang="scss">
-.text-right {
-  text-align: left;
-}
-</style>
