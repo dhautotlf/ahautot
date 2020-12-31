@@ -9,6 +9,7 @@
         <v-col cols="12" md="8" sm="12" xs="12"  class="text-center text-md-right">
           <router-link to="/">Home</router-link>
       <router-link to="/resume">Resume</router-link>
+      <router-link to="/contact">Contact</router-link>
       </v-col>
 </v-row>
       </v-container>
